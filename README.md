@@ -46,4 +46,11 @@ Url : /category/edit/DocumentObjectID
 Method : PUT
 Body : raw > JSON
 Query : { "name": "NewValue" }
+
+[ Delete ]
+Url : /category/delete/DocumentObjectID?_method=DELETE
+Method : POST
+
+Url : /category/delete/DocumentObjectID
+Method : DELETE
 ```
