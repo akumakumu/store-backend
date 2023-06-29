@@ -24,8 +24,26 @@ MONGO_URI=YourDatabaseURI
 <h3>POSTMAN</h3>
 
 ```
+> Category
+
+[ CREATE ]
 Url : /category/create
 Method : POST
 Body : raw > JSON
-Query : { "name": "UourValue" }
+Query : { "name": "YourValue" }
+
+[ Read ]
+Url : /category/edit/DocumentObjectID
+Method : GET
+
+[ Update ]
+Url : /category/edit/DocumentObjectID?_method=PUT
+Method : POST
+Body : raw > JSON
+Query : { "name": "NewValue" }
+
+Url : /category/edit/DocumentObjectID
+Method : PUT
+Body : raw > JSON
+Query : { "name": "NewValue" }
 ```
