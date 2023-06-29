@@ -4,7 +4,7 @@
 npm install
 
 -g npm-check-update nodemon
-dotenv debug  express mongoose ejs cookie-parser http-errors morgan
+dotenv debug  express mongoose ejs cookie-parser http-errors morgan method-override connect-flash express-session
 ```
 
 <h3>MongoDB Configure</h3>
