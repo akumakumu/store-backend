@@ -6,3 +6,16 @@ VALORANT Points - 1000 : 649ed3d41beaee55d8dbe152
 VALORANT Points - 1900 : 649ed3ff1beaee55d8dbe155
 VALORANT Points - 3325 : 649ed41f1beaee55d8dbe158
 VALORANT Points - 4750 : 649ed44f1beaee55d8dbe15b
+
+{
+    "name": "Valorant",
+    "category": "649dfca5bb4df9637f8a0bee",
+    "nominals": ["649ed3d41beaee55d8dbe152", "649ed3ff1beaee55d8dbe155", "649ed41f1beaee55d8dbe158", "649ed44f1beaee55d8dbe15b"]
+}
+
+test 649ef43a4c41034e90cc9998
+{
+    "name": "Valorant Change 3",
+    "category": "649dfca5bb4df9637f8a0bee",
+    "nominals": ["649ed3d41beaee55d8dbe152", "649ed3ff1beaee55d8dbe155", "649ed41f1beaee55d8dbe158"]
+}

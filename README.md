@@ -133,4 +133,31 @@ Query :
     "nominals": ["NominalObjectId", "NominalObjectId"],
     "thumbnail": "UrlThumbnail" // optional
 }
+
+[ Read ]
+Url : /voucher/edit/DocumentObjectId
+Method : GET
+
+[ Update ]
+Url : /voucher/edit/DocumentObjectId?_method=PUT
+Method : POST
+Body : raw > JSON
+Query : 
+{
+    "name": "GameName",
+    "category": "CategoryObjectId",
+    "nominals": ["NominalObjectId", "NominalObjectId"],
+    "thumbnail": "UrlThumbnail" // optional
+}
+
+Url : /voucher/edit/DocumentObjectId
+Method : PUT
+Body : raw > JSON
+Query : 
+{
+    "name": "GameName",
+    "category": "CategoryObjectId",
+    "nominals": ["NominalObjectId", "NominalObjectId"],
+    "thumbnail": "UrlThumbnail" // optional
+}
 ```
