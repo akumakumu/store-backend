@@ -185,3 +185,18 @@ Query :
     "status": "Y/N"
 }
 ```
+
+<h4>Bank</h4>
+
+```
+[ CREATE ]
+Url : /bank/create
+Method : POST
+Body : raw > JSON
+Query : 
+{
+    "name": "YourName",
+    "nameBank": "YourBank",
+    "noRekening": "YourBankNumber"
+}
+```

@@ -16,7 +16,7 @@ module.exports = {
             // Checking the Alert
             console.log(alert);
 
-            res.render('admin/category/view_category', {
+            res.render('admin/category/view_nominal', {
                 nominal,
                 alert
             })

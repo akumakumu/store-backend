@@ -25,7 +25,7 @@ module.exports = {
             // Checking the Alert
             console.log(alert);
 
-            res.render('admin/voucher/view_category', {
+            res.render('admin/voucher/view_voucher', {
                 voucher,
                 alert
             })
