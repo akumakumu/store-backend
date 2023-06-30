@@ -16,6 +16,7 @@ admin-lte@^3.2 --save
 
 ```
 Collections : 
+> banks
 > categories
 > nominals
 > vouchers
