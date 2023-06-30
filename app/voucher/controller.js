@@ -17,7 +17,11 @@ module.exports = {
             }
             
             const voucher = await Voucher.find()
+            .populate('category')
+            .populate('nominals')
 
+            // Checking Voucher
+            console.log(voucher);
             // Checking the Alert
             console.log(alert);
 
@@ -117,19 +121,19 @@ module.exports = {
     //     try {
     //         const { id } = req.params
 
-    //         const nominal = await Nominal.findOne({ _id : id })
+    //         const voucher = await Voucher.findOne({ _id : id })
     //         // To check the category variable on console with GET - remove in future when FE is done
-    //         console.log(nominal)
+    //         console.log(voucher)
 
-    //         res.render('admin/nominal/edit', {
-    //             nominal
+    //         res.render('admin/voucher/edit', {
+    //             voucher
     //         })
     //     }
     //     catch (err) {
     //         req.flash('alertMessage', `${err.message}`);
     //         req.flash('alertStatus', 'danger');
             
-    //         res.redirect('/nominal');
+    //         res.redirect('/voucher');
     //     }
     // },
 
