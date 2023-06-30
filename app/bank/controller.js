@@ -62,50 +62,50 @@ module.exports = {
         }
     },
 
-    // viewEdit : async(req, res) => {
-    //     try {
-    //         const { id } = req.params
+    viewEdit : async(req, res) => {
+        try {
+            const { id } = req.params
 
-    //         const nominal = await Nominal.findOne({ _id : id })
-    //         // To check the category variable on console with GET - remove in future when FE is done
-    //         console.log(nominal)
+            const bank = await Bank.findOne({ _id : id })
+            // To check the category variable on console with GET - remove in future when FE is done
+            console.log(bank)
 
-    //         res.render('admin/nominal/edit', {
-    //             nominal
-    //         })
-    //     }
-    //     catch (err) {
-    //         req.flash('alertMessage', `${err.message}`);
-    //         req.flash('alertStatus', 'danger');
+            res.render('admin/bank/edit', {
+                nominal
+            })
+        }
+        catch (err) {
+            req.flash('alertMessage', `${err.message}`);
+            req.flash('alertStatus', 'danger');
             
-    //         res.redirect('/nominal');
-    //     }
-    // },
+            res.redirect('/bank');
+        }
+    },
 
-    // actionEdit : async(req, res) => {
-    //     try {
-    //         const { id } = req.params;
-    //         const { coinName, coinQuantity, price } = req.body;
+    actionEdit : async(req, res) => {
+        try {
+            const { id } = req.params;
+            const { name, nameBank, noRekening } = req.body;
 
-    //         await Nominal.findOneAndUpdate({
-    //             _id : id
-    //         }, {
-    //             coinName, coinQuantity, price
-    //         });
+            await Bank.findOneAndUpdate({
+                _id : id
+            }, {
+                name, nameBank, noRekening
+            });
 
-    //         req.flash('alertMessage', "Berhasil ubah nominal")
-    //         req.flash('alertStatus', "success")
+            req.flash('alertMessage', "Berhasil ubah bank")
+            req.flash('alertStatus', "success")
 
-    //         res.redirect('./nominal')
-    //     }
+            res.redirect('/bank')
+        }
 
-    //     catch (err) {
-    //         req.flash('alertMessage', `${err.message}`);
-    //         req.flash('alertStatus', 'danger');
+        catch (err) {
+            req.flash('alertMessage', `${err.message}`);
+            req.flash('alertStatus', 'danger');
             
-    //         res.redirect('/nominal');
-    //     }
-    // },
+            res.redirect('/bank');
+        }
+    },
 
     // actionDelete : async(req, res) => {
     //     try {

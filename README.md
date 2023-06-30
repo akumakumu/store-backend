@@ -199,4 +199,25 @@ Query :
     "nameBank": "YourBank",
     "noRekening": "YourBankNumber"
 }
+
+[ Update ]
+Url : /bank/edit/DocumentObjectId?_method=PUT
+Method : POST
+Body : raw > JSON
+Query : 
+{
+    "name": "YourName",
+    "nameBank": "YourBank",
+    "noRekening": "YourBankNumber"
+}
+
+Url : /bank/edit/DocumentObjectId
+Method : PUT
+Body : raw > JSON
+Query : 
+{
+    "name": "YourName",
+    "nameBank": "YourBank",
+    "noRekening": "YourBankNumber"
+}
 ```

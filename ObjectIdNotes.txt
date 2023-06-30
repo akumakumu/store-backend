@@ -20,3 +20,11 @@ test 649ef43a4c41034e90cc9998
     "category": "649dfca5bb4df9637f8a0bee",
     "nominals": ["649ed3d41beaee55d8dbe152", "649ed3ff1beaee55d8dbe155", "649ed41f1beaee55d8dbe158"]
 }
+
+- Bank -
+649f2b0c657119a39d146f98
+{
+    "name": "Tegar Erik",
+    "nameBank": "BCA",
+    "noRekening": "1234567890"
+}
