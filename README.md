@@ -117,3 +117,21 @@ Method : POST
 Url : /nominal/delete/DocumentObjectID
 Method : DELETE
 ```
+
+<h4>Voucher</h4>
+
+```
+[ CREATE ]
+Url : /voucher/create
+Method : POST
+Body : raw > JSON
+Query : 
+{
+    "name": "GameName",
+    "status": "Y/N",
+    "thumbnail": "LinkThumbnail",
+    "category": ,
+    "nominals: ,
+    "user": 
+}
+```
