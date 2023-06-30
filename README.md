@@ -109,4 +109,11 @@ Query :
     "coinName": "DesiredCurrency",
     "price": YourPrice
 }
+
+[ Delete ]
+Url : /nominal/delete/DocumentObjectID?_method=DELETE
+Method : POST
+
+Url : /nominal/delete/DocumentObjectID
+Method : DELETE
 ```
