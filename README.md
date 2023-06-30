@@ -221,4 +221,11 @@ Query :
     "nameBank": "YourBank",
     "noRekening": "YourBankNumber"
 }
+
+[ Delete ]
+Url : /bank/delete/DocumentObjectId?_method=DELETE
+Method : POST
+
+Url : /bank/delete/DocumentObjectId
+Method : DELETE
 ```
