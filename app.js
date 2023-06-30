@@ -39,6 +39,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// adminlte
+app.use('/adminlte', express.static(path.join(__dirname, '/node_modules/admin-lte/')));
+
 app.use('/', dashboardRouter);
 app.use('/category', categoryRouter);
 app.use('/nominal', nominalRouter);

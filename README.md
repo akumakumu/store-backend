@@ -7,6 +7,11 @@ npm install
 dotenv debug  express mongoose ejs cookie-parser http-errors morgan method-override connect-flash express-session
 ```
 
+```
+> front-end (views)
+admin-lte@^3.2 --save
+```
+
 <h3>MongoDB Configure</h3>
 
 ```
@@ -72,6 +77,31 @@ Method : DELETE
 [ CREATE ]
 Url : /nominal/create
 Method : POST
+Body : raw > JSON
+Query : 
+{
+    "coinQuantity": YourNumber,
+    "coinName": "DesiredCurrency",
+    "price": YourPrice
+}
+
+[ Read ]
+Url : /nominal/edit/DocumentObjectID
+Method : GET
+
+[ Update ]
+Url : /nominal/edit/DocumentObjectID?_method=PUT
+Method : POST
+Body : raw > JSON
+Query : 
+{
+    "coinQuantity": YourNumber,
+    "coinName": "DesiredCurrency",
+    "price": YourPrice
+}
+
+Url : /nominal/edit/DocumentObjectID
+Method : PUT
 Body : raw > JSON
 Query : 
 {
