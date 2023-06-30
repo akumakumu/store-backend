@@ -7,6 +7,7 @@ VALORANT Points - 1900 : 649ed3ff1beaee55d8dbe155
 VALORANT Points - 3325 : 649ed41f1beaee55d8dbe158
 VALORANT Points - 4750 : 649ed44f1beaee55d8dbe15b
 
+649ed92a1beaee55d8dbe15e
 {
     "name": "Valorant",
     "category": "649dfca5bb4df9637f8a0bee",
