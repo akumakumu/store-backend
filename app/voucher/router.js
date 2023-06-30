@@ -1,12 +1,15 @@
 var express = require('express');
 var router = express.Router();
 
-const { index, viewCreate } = require('./controller');
+const { index, viewCreate, actionCreate } = require('./controller');
+const multer = require('multer');
+const os = require('os');
 
 /* GET home page. */
 router.get('/', index);
 router.get('/voucher', viewCreate);
-// router.post('/create', actionCreate);
+
+router.post('/create', multer({dest: os.tmpdir()}).single('image'), actionCreate);
 // router.get('/edit/:id', viewEdit);
 // router.put('/edit/:id', actionEdit);
 // router.delete('/delete/:id', actionDelete);

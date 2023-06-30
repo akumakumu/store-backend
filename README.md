@@ -4,7 +4,7 @@
 npm install
 
 -g npm-check-update nodemon
-dotenv debug  express mongoose ejs cookie-parser http-errors morgan method-override connect-flash express-session
+dotenv debug  express mongoose ejs cookie-parser http-errors morgan method-override connect-flash express-session multer
 ```
 
 ```
@@ -18,6 +18,7 @@ admin-lte@^3.2 --save
 Collections : 
 > categories
 > nominals
+> vouchers
 ```
 
 <h3>.env</h3>
@@ -43,11 +44,11 @@ Query :
 }
 
 [ Read ]
-Url : /category/edit/DocumentObjectID
+Url : /category/edit/DocumentObjectId
 Method : GET
 
 [ Update ]
-Url : /category/edit/DocumentObjectID?_method=PUT
+Url : /category/edit/DocumentObjectId?_method=PUT
 Method : POST
 Body : raw > JSON
 Query : 
@@ -55,7 +56,7 @@ Query :
     "name": "NewValue"
 }
 
-Url : /category/edit/DocumentObjectID
+Url : /category/edit/DocumentObjectId
 Method : PUT
 Body : raw > JSON
 Query : 
@@ -64,10 +65,10 @@ Query :
 }
 
 [ Delete ]
-Url : /category/delete/DocumentObjectID?_method=DELETE
+Url : /category/delete/DocumentObjectId?_method=DELETE
 Method : POST
 
-Url : /category/delete/DocumentObjectID
+Url : /category/delete/DocumentObjectId
 Method : DELETE
 ```
 
@@ -86,11 +87,11 @@ Query :
 }
 
 [ Read ]
-Url : /nominal/edit/DocumentObjectID
+Url : /nominal/edit/DocumentObjectId
 Method : GET
 
 [ Update ]
-Url : /nominal/edit/DocumentObjectID?_method=PUT
+Url : /nominal/edit/DocumentObjectId?_method=PUT
 Method : POST
 Body : raw > JSON
 Query : 
@@ -100,7 +101,7 @@ Query :
     "price": YourPrice
 }
 
-Url : /nominal/edit/DocumentObjectID
+Url : /nominal/edit/DocumentObjectId
 Method : PUT
 Body : raw > JSON
 Query : 
@@ -111,10 +112,10 @@ Query :
 }
 
 [ Delete ]
-Url : /nominal/delete/DocumentObjectID?_method=DELETE
+Url : /nominal/delete/DocumentObjectId?_method=DELETE
 Method : POST
 
-Url : /nominal/delete/DocumentObjectID
+Url : /nominal/delete/DocumentObjectId
 Method : DELETE
 ```
 
@@ -128,10 +129,8 @@ Body : raw > JSON
 Query : 
 {
     "name": "GameName",
-    "status": "Y/N",
-    "thumbnail": "LinkThumbnail",
-    "category": ,
-    "nominals: ,
-    "user": 
+    "category": "CategoryObjectId",
+    "nominals": ["NominalObjectId", "NominalObjectId"],
+    "thumbnail": "UrlThumbnail" // optional
 }
 ```
