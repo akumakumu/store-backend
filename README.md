@@ -234,7 +234,7 @@ Method : DELETE
 
 ```
 [ CREATE ]
-Url : /voucher/create
+Url : /payment/create
 Method : POST
 Body : raw > JSON
 Query : 
