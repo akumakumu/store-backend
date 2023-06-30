@@ -229,3 +229,17 @@ Method : POST
 Url : /bank/delete/DocumentObjectId
 Method : DELETE
 ```
+
+<h4>Payment</h4>
+
+```
+[ CREATE ]
+Url : /voucher/create
+Method : POST
+Body : raw > JSON
+Query : 
+{
+    "bank": ["BankObjectId", "BankObjectId"],
+    "type": "YourPaymentMethod"
+}
+```

@@ -1,0 +1,14 @@
+var express = require('express');
+var router = express.Router();
+
+const { index, viewCreate, actionCreate } = require('./controller');
+
+/* GET home page. */
+router.get('/', index);
+router.get('/payment', viewCreate);
+router.post('/create', actionCreate);
+// router.get('/edit/:id', viewEdit);
+// router.put('/edit/:id', actionEdit);
+// router.delete('/delete/:id', actionDelete);
+
+module.exports = router;

@@ -22,9 +22,11 @@ test 649ef43a4c41034e90cc9998
 }
 
 - Bank -
-649f2b0c657119a39d146f98
+649f265ebe148b4e3adb4229
+649f2af6657119a39d146f95
+
+- Payment -
 {
-    "name": "Tegar Erik",
-    "nameBank": "BCA",
-    "noRekening": "1234567890"
+    "banks": ["649f265ebe148b4e3adb4229", "649f2af6657119a39d146f95"],
+    "type": "Transfer"
 }
