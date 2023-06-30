@@ -160,4 +160,11 @@ Query :
     "nominals": ["NominalObjectId", "NominalObjectId"],
     "thumbnail": "UrlThumbnail" // optional
 }
+
+[ Delete ]
+Url : /voucher/delete/DocumentObjectId?_method=DELETE
+Method : POST
+
+Url : /voucher/delete/DocumentObjectId
+Method : DELETE
 ```
