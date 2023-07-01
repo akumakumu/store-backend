@@ -26,7 +26,14 @@ test 649ef43a4c41034e90cc9998
 649f2af6657119a39d146f95
 
 - Payment -
+649f3bf48f2a19ea9f0e5559
 {
     "banks": ["649f265ebe148b4e3adb4229", "649f2af6657119a39d146f95"],
     "type": "Transfer"
+}
+
+649fce71f1d59565cb8a8776
+{
+    "banks": ["649f265ebe148b4e3adb4229"],
+    "type": "Direct"
 }

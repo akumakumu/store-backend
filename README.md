@@ -261,4 +261,11 @@ Query :
     "bank": ["BankObjectId", "BankObjectId"],
     "type": "YourPaymentMethod"
 }
+
+[ Delete ]
+Url : /payment/delete/DocumentObjectId?_method=DELETE
+Method : POST
+
+Url : /payment/delete/DocumentObjectId
+Method : DELETE
 ```
