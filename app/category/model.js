@@ -5,6 +5,8 @@ let categorySchema = mongoose.Schema({
         type: String,
         require: [true, 'Nama kategori harus diisi']
     }
+}, {
+    timestamp: true
 });
 
 // Param : collections

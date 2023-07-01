@@ -4,7 +4,7 @@
 npm install
 
 -g npm-check-update nodemon
-dotenv debug  express mongoose ejs cookie-parser http-errors morgan method-override connect-flash express-session multer
+dotenv debug  express mongoose ejs cookie-parser http-errors morgan method-override connect-flash express-session multer bcryptjs
 ```
 
 ```

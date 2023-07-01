@@ -3,6 +3,11 @@ var router = express.Router();
 
 const { index, viewCreate, actionCreate, viewEdit, actionEdit, actionDelete } = require('./controller');
 
+// Middleware Authentication
+const { isLoginAdmin } = require('../middleware/auth')
+
+router.use(isLoginAdmin)
+
 /* GET home page. */
 router.get('/', index);
 router.get('/nominal', viewCreate);
