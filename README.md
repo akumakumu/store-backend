@@ -19,6 +19,10 @@ Collections :
 > banks
 > categories
 > nominals
+> payments
+> players
+> transactions
+> users
 > vouchers
 ```
 

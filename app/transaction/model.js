@@ -55,8 +55,8 @@ let transactionSchema = mongoose.Schema({
     accountUser: {
         type: String,
         require: [true, 'Nama akun harus diisi'],
-        maxlength: [225, 'Panjang nama antara 3-225 karakter'],
-        minlength: [3, 'Panjang nama antara 3-225 karakter']
+        maxlength: [225, 'Panjang username antara 3-225 karakter'],
+        minlength: [3, 'Panjang username antara 3-225 karakter']
     },
 
     tax: {
@@ -88,8 +88,8 @@ let transactionSchema = mongoose.Schema({
         phoneNumber: {
             type: Number,
             require: [true, 'Nomor telepon harus diisi'],
-            maxlength: [13, 'Panjang nama antara 9-13 karakter'],
-            minlength: [9, 'Panjang nama antara 9-13 karakter']
+            maxlength: [13, 'Panjang nomor telepon antara 9-13 karakter'],
+            minlength: [9, 'Panjang nomor telepon antara 9-13 karakter']
         }
     },
 
