@@ -5,7 +5,7 @@ let userSchema = mongoose.Schema({
         type: String,
         require: [true, 'Email harus diisi']
     },
-    nama: {
+    name: {
         type: String,
         require: [true, 'Nama harus diisi']
     },
