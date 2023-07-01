@@ -5,9 +5,9 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 // Middleware
+const methodOverride = require('method-override');
 const session = require('express-session');
 const flash = require('connect-flash');
-const methodOverride = require('method-override');
 
 const dashboardRouter = require('./app/dashboard/router');
 const categoryRouter = require('./app/category/router');
@@ -28,7 +28,7 @@ app.use(session({
   secret: 'keyboard cat',
   resave: false,
   saveUninitialized: true,
-  cookie: {}
+  cookie: { }
 }))
 
 // Connect Session

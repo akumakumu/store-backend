@@ -10,21 +10,15 @@ module.exports = {
             const alert = { 
                 message: alertMessage, 
                 status: alertStatus 
+            } 
+
+            if (req.session.user === null || req.session.user === undefined) {
+                res.render('admin/users/view_signin', {
+                    alert
+                })
+            } else {
+                res.redirect('/dashboard')
             }
-
-            res.render('admin/users/view_signin', {
-                alert
-            }) 
-
-            // Bugged, redirect got looped
-            // if (req.session.user === null || res.session.user === undefined) {
-            //     res.render('admin/users/view_signin', {
-            //         alert
-            //     }) 
-            // }
-            // else {
-            //     res.redirect('/dashboard')
-            // }
         }
         catch (err) {
             req.flash('alertMessage', `${err.message}`);
@@ -41,16 +35,18 @@ module.exports = {
 
             if (check) {
                 if(check.status === 'Y') {
-                    req.session.user = {
-                        id: check._id,
-                        email: check.email,
-                        status: check.status,
-                        name: check.name
-                    }
-
                     const checkPassword = await bcrypt.compare(password, check.password)
 
                     if (checkPassword) {
+                        req.session.user = {
+                            id: check._id,
+                            email: check.email,
+                            status: check.status,
+                            name: check.name
+                        }
+
+                        console.log(req.session.user)
+
                         res.redirect('/dashboard')
                     }
                     else {
