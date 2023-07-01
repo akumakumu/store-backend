@@ -18,7 +18,9 @@ module.exports = {
 
             res.render('admin/category/view_nominal', {
                 nominal,
-                alert
+                alert,
+                name: req.session.user.name,
+                title: 'Halaman Nominal'
             })
         }
         catch (err) {
@@ -30,7 +32,10 @@ module.exports = {
     },
     viewCreate : async (req, res) => {
         try {
-            res.render('admin/nominal/create');
+            res.render('admin/nominal/create', {
+                name: req.session.user.name,
+                title: 'Halaman Tambah Nominal'
+            });
         }
         catch (err) {
             req.flash('alertMessage', `${err.message}`);
@@ -69,7 +74,9 @@ module.exports = {
             console.log(nominal)
 
             res.render('admin/nominal/edit', {
-                nominal
+                nominal,
+                name: req.session.user.name,
+                title: 'Halaman Ubah Nominal'
             })
         }
         catch (err) {
