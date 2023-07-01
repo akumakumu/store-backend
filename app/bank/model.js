@@ -14,7 +14,7 @@ let bankSchema = mongoose.Schema({
         require: [true, 'Nomor rekening bank harus diisi']
     }
 }, {
-    timestamp: true
+    timestamps: true
 });
 
 // Param : collections

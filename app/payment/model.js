@@ -15,7 +15,7 @@ let paymentSchema = mongoose.Schema({
         ref: 'Bank'
     }]
 }, {
-    timestamp: true
+    timestamps: true
 });
 
 // Param : collections

@@ -28,7 +28,7 @@ let userSchema = mongoose.Schema({
         require: [true, 'Nomor telepon harus diisi']
     }
 }, {
-    timestamp: true
+    timestamps: true
 });
 
 // Param : collections

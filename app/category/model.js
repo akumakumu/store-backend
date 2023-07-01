@@ -6,7 +6,7 @@ let categorySchema = mongoose.Schema({
         require: [true, 'Nama kategori harus diisi']
     }
 }, {
-    timestamp: true
+    timestamps: true
 });
 
 // Param : collections

@@ -14,7 +14,7 @@ let nominalSchema = mongoose.Schema({
         default: 0
     }
 }, {
-    timestamp: true
+    timestamps: true
 });
 
 // Param : collections
