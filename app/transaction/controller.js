@@ -12,6 +12,7 @@ module.exports = {
             }
             
             const transaction = await Transaction.find()
+            .populate('player')
 
             // Checking the Alert
             console.log(transaction);
