@@ -268,4 +268,21 @@ Method : POST
 
 Url : /payment/delete/DocumentObjectId
 Method : DELETE
+
+[ Update - Status ]
+Url : /payment/status/DocumentObjectId?_method=PUT
+Method : POST
+Body : raw > JSON
+Query : 
+{
+    "status": "Y/N"
+}
+
+Url : /payment/status/DocumentObjectId
+Method : PUT
+Body : raw > JSON
+Query : 
+{
+    "status": "Y/N"
+}
 ```
