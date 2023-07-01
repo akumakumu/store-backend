@@ -13,6 +13,7 @@ module.exports = {
             }
             
             const payment = await Payment.find()
+            .populate('banks')
 
             // Checking the Alert
             console.log(payment);
@@ -32,10 +33,10 @@ module.exports = {
     },
     viewCreate : async (req, res) => {
         try {
-            const bank = await Bank.find();
+            const banks = await Bank.find()
 
             res.render('admin/payment/create', {
-                bank
+                banks
             });
         }
         catch (err) {
@@ -66,50 +67,55 @@ module.exports = {
         }
     },
 
-    // viewEdit : async(req, res) => {
-    //     try {
-    //         const { id } = req.params
+    viewEdit : async(req, res) => {
+        try {
+            const { id } = req.params
 
-    //         const nominal = await Nominal.findOne({ _id : id })
-    //         // To check the category variable on console with GET - remove in future when FE is done
-    //         console.log(nominal)
+            const payment = await Payment.findOne({ _id : id })
+            .populate('banks')
 
-    //         res.render('admin/nominal/edit', {
-    //             nominal
-    //         })
-    //     }
-    //     catch (err) {
-    //         req.flash('alertMessage', `${err.message}`);
-    //         req.flash('alertStatus', 'danger');
+            const banks = await Bank.find()
+
+            // To check the category variable on console with GET - remove in future when FE is done
+            console.log(payment)
+
+            res.render('admin/payment/edit', {
+                payment,
+                banks
+            })
+        }
+        catch (err) {
+            req.flash('alertMessage', `${err.message}`);
+            req.flash('alertStatus', 'danger');
             
-    //         res.redirect('/nominal');
-    //     }
-    // },
+            res.redirect('/payment');
+        }
+    },
 
-    // actionEdit : async(req, res) => {
-    //     try {
-    //         const { id } = req.params;
-    //         const { coinName, coinQuantity, price } = req.body;
+    actionEdit : async(req, res) => {
+        try {
+            const { id } = req.params;
+            const { banks, type } = req.body;
 
-    //         await Nominal.findOneAndUpdate({
-    //             _id : id
-    //         }, {
-    //             coinName, coinQuantity, price
-    //         });
+            await Payment.findOneAndUpdate({
+                _id : id
+            }, {
+                banks, type
+            });
 
-    //         req.flash('alertMessage', "Berhasil ubah nominal")
-    //         req.flash('alertStatus', "success")
+            req.flash('alertMessage', "Berhasil ubah payment")
+            req.flash('alertStatus', "success")
 
-    //         res.redirect('./nominal')
-    //     }
+            res.redirect('/payment')
+        }
 
-    //     catch (err) {
-    //         req.flash('alertMessage', `${err.message}`);
-    //         req.flash('alertStatus', 'danger');
+        catch (err) {
+            req.flash('alertMessage', `${err.message}`);
+            req.flash('alertStatus', 'danger');
             
-    //         res.redirect('/nominal');
-    //     }
-    // },
+            res.redirect('/payment');
+        }
+    },
 
     // actionDelete : async(req, res) => {
     //     try {

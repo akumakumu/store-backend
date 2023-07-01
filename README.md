@@ -242,4 +242,23 @@ Query :
     "bank": ["BankObjectId", "BankObjectId"],
     "type": "YourPaymentMethod"
 }
+
+[ Update ]
+Url : /payment/edit/DocumentObjectId?_method=PUT
+Method : POST
+Body : raw > JSON
+Query : 
+{
+    "bank": ["BankObjectId", "BankObjectId"],
+    "type": "YourPaymentMethod"
+}
+
+Url : /payment/edit/DocumentObjectId
+Method : PUT
+Body : raw > JSON
+Query : 
+{
+    "bank": ["BankObjectId", "BankObjectId"],
+    "type": "YourPaymentMethod"
+}
 ```
