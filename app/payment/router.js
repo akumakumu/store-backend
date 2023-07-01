@@ -3,10 +3,10 @@ var router = express.Router();
 
 const { index, viewCreate, actionCreate, viewEdit, actionEdit, actionDelete, actionStatus } = require('./controller');
 
-// Middleware Authentication
-const { isLoginAdmin } = require('../middleware/auth')
+// // Middleware Authentication
+// const { isLoginAdmin } = require('../middleware/auth')
 
-router.use(isLoginAdmin)
+// router.use(isLoginAdmin)
 
 /* GET home page. */
 router.get('/', index);

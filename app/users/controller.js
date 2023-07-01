@@ -12,14 +12,19 @@ module.exports = {
                 status: alertStatus 
             }
 
-            if (req.session.user === null || res.session.user === undefined) {
-                res.render('admin/users/view_signin', {
-                    alert
-                }) 
-            }
-            else {
-                res.redirect('/dashboard')
-            }
+            res.render('admin/users/view_signin', {
+                alert
+            }) 
+
+            // Bugged, redirect got looped
+            // if (req.session.user === null || res.session.user === undefined) {
+            //     res.render('admin/users/view_signin', {
+            //         alert
+            //     }) 
+            // }
+            // else {
+            //     res.redirect('/dashboard')
+            // }
         }
         catch (err) {
             req.flash('alertMessage', `${err.message}`);
