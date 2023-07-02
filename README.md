@@ -40,9 +40,13 @@ MONGO_URI=YourDatabaseURI
 [Landing Page]
 Url : /api/players/landingpage
 Method : GET
+
+[Detail Page]
+Url : /api/DocumentObjectId/detail
+Method : GET
 ```
 
-<h4>POSTMAN (CRUD)</h4>
+<h3>POSTMAN (CRUD)</h3>
 
 <h4>Category</h4>
 
