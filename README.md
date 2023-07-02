@@ -44,6 +44,17 @@ Method : GET
 [Detail Page]
 Url : /api/DocumentObjectId/detail
 Method : GET
+
+[ Sign Up ]
+Url : /api/auth/signup
+Body : form-data
+image = file
+email = text
+password = text
+phoneNumber = text
+username = text
+name = text
+favorite = text
 ```
 
 <h3>POSTMAN (CRUD)</h3>
