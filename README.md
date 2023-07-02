@@ -70,6 +70,21 @@ Query :
     "email": "YourEmail",
     "password: "YourPassword"
 }
+
+[ Check Out ]
+Url : /api/players/checkout
+Method : POST
+Authorization : Bearer - JWToken
+Body : raw - JSON
+Query :
+{
+    "voucher": "VoucherObjectId",
+    "nominal": "NominalObjectId",
+    "payment": "PaymentObjectId",
+    "bank": "BankObjectId",
+    "name": "YourName",
+    "accountUser": "YourAccount"
+}
 ```
 
 <h3>POSTMAN (CRUD)</h3>
