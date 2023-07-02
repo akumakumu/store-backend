@@ -4,7 +4,7 @@
 npm install
 
 -g npm-check-update nodemon
-dotenv debug  express mongoose ejs cookie-parser http-errors morgan method-override connect-flash express-session multer bcryptjs
+dotenv debug  express mongoose ejs cookie-parser http-errors morgan method-override connect-flash express-session multer bcryptjs jsonwebtoken
 ```
 
 ```
@@ -60,6 +60,16 @@ favorite = text
 [ Category ]
 Url : /api/players/category
 Method : GET
+
+[ Sign In ]
+Url : /api/auth/signin
+Method : POST
+Body : raw - JSON
+Query :
+{
+    "email": "YourEmail",
+    "password: "YourPassword"
+}
 ```
 
 <h3>POSTMAN (CRUD)</h3>
