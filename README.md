@@ -34,7 +34,15 @@ SERVICE_NAME=store-backend
 MONGO_URI=YourDatabaseURI
 ```
 
-<h3>POSTMAN</h3>
+<h3>POSTMAN (API)</h3>
+
+```
+[Landing Page]
+Url : /api/players/landingpage
+Method : GET
+```
+
+<h4>POSTMAN (CRUD)</h4>
 
 <h4>Category</h4>
 
