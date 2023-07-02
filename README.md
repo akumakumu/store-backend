@@ -74,7 +74,7 @@ Query :
 [ Check Out ]
 Url : /api/players/checkout
 Method : POST
-Authorization : Bearer - JWToken
+Authorization : Bearer Token (Token = JWT Token)
 Body : raw - JSON
 Query :
 {
@@ -85,6 +85,11 @@ Query :
     "name": "YourName",
     "accountUser": "YourAccount"
 }
+
+[ Transaction History ]
+Url : /api/players/history
+Method : GET
+Authorization : Bearer Token (Token = JWT Token)
 ```
 
 <h3>POSTMAN (CRUD)</h3>
