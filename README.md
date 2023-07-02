@@ -47,6 +47,7 @@ Method : GET
 
 [ Sign Up ]
 Url : /api/auth/signup
+Method : POST
 Body : form-data
 image = file
 email = text
@@ -55,6 +56,10 @@ phoneNumber = text
 username = text
 name = text
 favorite = text
+
+[ Category ]
+Url : /api/players/category
+Method : GET
 ```
 
 <h3>POSTMAN (CRUD)</h3>
