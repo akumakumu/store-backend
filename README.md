@@ -95,6 +95,11 @@ Authorization : Bearer Token (Token = JWT Token)
 Url : /api/players/history/TransactionId/detail
 Method : GET
 Authorization : Bearer Token (Token = JWT Token)
+
+[ Dashboard ]
+Url : /api/players/dashboard
+Method : GET
+Authorization : Bearer Token (Token = JWT Token)
 ```
 
 <h3>POSTMAN (CRUD)</h3>
