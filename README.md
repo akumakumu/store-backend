@@ -100,6 +100,11 @@ Authorization : Bearer Token (Token = JWT Token)
 Url : /api/players/dashboard
 Method : GET
 Authorization : Bearer Token (Token = JWT Token)
+
+[ Profile ]
+Url : /api/players/profile
+Method : GET
+Authorization : Bearer Token (Token = JWT Token)
 ```
 
 <h3>POSTMAN (CRUD)</h3>
