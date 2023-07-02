@@ -90,6 +90,11 @@ Query :
 Url : /api/players/history
 Method : GET
 Authorization : Bearer Token (Token = JWT Token)
+
+[ Transaction History Detail ]
+Url : /api/players/history/TransactionId/detail
+Method : GET
+Authorization : Bearer Token (Token = JWT Token)
 ```
 
 <h3>POSTMAN (CRUD)</h3>
