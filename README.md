@@ -1,10 +1,16 @@
+<h3>POSTMAN Documenter</h3>
+
+```
+https://documenter.getpostman.com/view/28180512/2s93zCYfha
+```
+
 <h3>Packages</h3>
 
 ```
 npm install
 
 -g npm-check-update nodemon
-dotenv debug  express mongoose ejs cookie-parser http-errors morgan method-override connect-flash express-session multer bcryptjs jsonwebtoken
+dotenv debug  express mongoose ejs cookie-parser http-errors morgan method-override connect-flash express-session multer bcryptjs jsonwebtoken cors
 ```
 
 ```
