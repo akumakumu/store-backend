@@ -7,11 +7,13 @@ module.exports = {
     index: async (req, res) => {
         try {
 
-            const transaction = await Transaction.countDocument()
-            const voucher = await Voucher.countDocument()
-            const player = await Player.countDocument()
-            const category = await Category.countDocument()
+            const transaction = await Transaction.countDocuments()
+            const voucher = await Voucher.countDocuments()
+            const player = await Player.countDocuments()
+            const category = await Category.countDocuments()
 
+            // Checking variable, remove if FE is done
+            console.log(transaction, voucher, player, category)
             // If dashboard view already moved
             // res.render('admin/dashboard/view_dashboard', {
             res.render('index', {
