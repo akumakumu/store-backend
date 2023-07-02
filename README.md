@@ -105,6 +105,15 @@ Authorization : Bearer Token (Token = JWT Token)
 Url : /api/players/profile
 Method : GET
 Authorization : Bearer Token (Token = JWT Token)
+
+[ Profile Edit ]
+Url : /api/players/profile
+Method : PUT
+Authorization : Bearer Token (Token = JWT Token)
+Body : form-data
+name = text
+phoneNumber = text
+image = file
 ```
 
 <h3>POSTMAN (CRUD)</h3>
