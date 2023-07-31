@@ -27,6 +27,10 @@ var app = express();
 const URL = `/api`
 
 // Cors
+const corsOptions = {
+  origin: '*'
+};
+
 app.use(cors())
 
 // view engine setup
