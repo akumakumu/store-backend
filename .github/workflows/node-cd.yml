@@ -1,0 +1,24 @@
+name: Continous Development
+
+on:
+  push:
+    branches: [ main ]
+    
+jobs:
+  build:
+    name: CD
+    runs-on: ubuntu-latest
+    steps:
+    - name: cd with pm2 restart
+      uses: appleboy/ssh-action@v1.0.0
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: 22
+        script: |
+          cd ~/store-backend
+          sudo git pull origin main
+          sudo git status
+          npm install --only=prod
+          sudo pm2 restart back
